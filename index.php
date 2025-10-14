@@ -33,7 +33,7 @@ require_once 'config.php';
     <meta name="twitter:image" content="<?php echo $seo['og_image']; ?>">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="assets/Logo.jpeg">
+    <link rel="icon" type="image/jpeg" href="assets/Logo.png">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@ require_once 'config.php';
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <img src="assets/Logo.jpeg" alt="<?php echo SITE_NAME; ?> Logo">
+                    <img src="assets/Logo.png" alt="<?php echo SITE_NAME; ?> Logo">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -340,7 +340,7 @@ require_once 'config.php';
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <img src="assets/Logo.jpeg" alt="<?php echo SITE_NAME; ?> Logo" class="footer-logo">
+                    <img src="assets/Logo.png" alt="<?php echo SITE_NAME; ?> Logo" class="footer-logo">
                     <p><?php echo SITE_TAGLINE; ?> especializada em Santa Catarina.</p>
                 </div>
                 

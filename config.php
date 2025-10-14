@@ -154,7 +154,7 @@ $seo = [
     'keywords' => 'Advocacia em Pouso Redondo, Advogada em Santa Catarina, Direito Trabalhista SC, Direito Previdenciário SC, Direito de Família SC, Escritório de advocacia Pouso Redondo, Advogada trabalhista Santa Catarina, Consultoria jurídica SC',
     'author' => SITE_NAME,
     'robots' => 'index, follow',
-    'og_image' => 'assets/Logo.jpeg',
+    'og_image' => 'assets/Logo.png',
     'og_type' => 'website'
 ];
 
