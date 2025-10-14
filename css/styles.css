@@ -111,20 +111,38 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 1rem 0;
+    height: 85px; /* Altura da barra de navegação */
 }
 
+.header .container {
+    height: 100%;
+}
+
+/* O nav-wrapper agora posiciona os elementos */
 .nav-wrapper {
+    position: relative; /* Essencial para o posicionamento absoluto da logo */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end; /* Joga o menu de navegação para a direita */
+    height: 100%;
 }
 
+/* A logo agora é posicionada de forma absoluta */
+.logo {
+    position: absolute;
+    left: 0; /* Alinha no canto esquerdo do container */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralização perfeita */
+}
+
+/* Definimos o tamanho da logo */
 .logo img {
-    height: 50px;
+    height: 145px; /* O tamanho que você quer para a logo */
     width: auto;
+    /* Remova as margens negativas, não são mais necessárias */
 }
 
+/* O menu de navegação continua como antes */
 .nav-desktop {
     display: flex;
     align-items: center;
