@@ -28,7 +28,7 @@ define('EMERGENCY_NOTE', 'Plantão disponível para emergências');
 $advogadas = [
     [
         'nome' => 'Leticia Policarpo Macedo Fronza',
-        'oab' => 'OAB/SC 70.491',
+        'oab' => 'OAB/SC 64.503',
         'foto_portrait' => 'assets/leticia-portrait.jpeg',
         'foto_business' => 'assets/leticia-business.jpeg',
         'foto_office' => 'assets/leticia-office.jpeg',
@@ -36,8 +36,8 @@ $advogadas = [
     ],
     [
         'nome' => 'Raquel Nagel Dolzan',
-        'oab' => 'OAB/SC 64.503',
-        'foto_portrait' => 'assets/raquel-casual.jpeg',
+        'oab' => 'OAB/SC 70.491',
+        'foto_portrait' => 'assets/raquel-casual.jpeg', 
         'foto_oab' => 'assets/raquel-oab.jpeg'
     ]
 ];
@@ -187,16 +187,6 @@ $redes_sociais = [
         'usuario' => INSTAGRAM,
         'ativo' => true
     ],
-    'facebook' => [
-        'url' => '',
-        'usuario' => '',
-        'ativo' => false
-    ],
-    'linkedin' => [
-        'url' => '',
-        'usuario' => '',
-        'ativo' => false
-    ]
 ];
 
 // Função para gerar URL do WhatsApp
