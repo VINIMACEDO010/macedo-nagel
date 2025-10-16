@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%; /* << CORREÇÃO DEFINITIVA ADICIONADA AQUI */
 }
 
 html {
@@ -14,7 +15,7 @@ body {
     line-height: 1.6;
     color: #1a1a1a;
     background-color: var(--off-white); 
-    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-x: hidden; /* Garante que a rolagem horizontal seja desativada */
 }
 
 .container {
