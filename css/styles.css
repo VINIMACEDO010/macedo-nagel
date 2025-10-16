@@ -169,13 +169,21 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark);
 }
 
+
 .nav-mobile {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 1.5rem; /* Um pouco mais de padding para respirar */
+
+    /* --- AS CORREÇÕES IMPORTANTES ESTÃO AQUI --- */
+    position: absolute; /* Para o menu flutuar sobre o conteúdo */
+    top: 100%; /* Começa exatamente abaixo do header */
+    left: 0;
+    right: 0;
+    background-color: var(--white); /* O fundo branco que faltava! */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar */
 }
 
 .nav-mobile.active {
