@@ -14,6 +14,7 @@ body {
     line-height: 1.6;
     color: #1a1a1a;
     background-color: var(--off-white); 
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 .container {
@@ -78,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 25px rgba(188, 153, 66, 0.3);
 }
 
 .btn-secondary {
@@ -117,38 +118,33 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 85px; /* Altura da barra de navegação */
+    height: 85px;
 }
 
 .header .container {
     height: 100%;
 }
 
-/* O nav-wrapper agora posiciona os elementos */
 .nav-wrapper {
-    position: relative; /* Essencial para o posicionamento absoluto da logo */
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Joga o menu de navegação para a direita */
+    justify-content: flex-end;
     height: 100%;
 }
 
-/* A logo agora é posicionada de forma absoluta */
 .logo {
     position: absolute;
-    left: 0; /* Alinha no canto esquerdo do container */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centralização perfeita */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Definimos o tamanho da logo */
 .logo img {
-    height: 145px; /* O tamanho que você quer para a logo */
+    height: 145px;
     width: auto;
-    /* Remova as margens negativas, não são mais necessárias */
 }
 
-/* O menu de navegação continua como antes */
 .nav-desktop {
     display: flex;
     align-items: center;
@@ -175,21 +171,18 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark);
 }
 
-
 .nav-mobile {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.5rem; /* Um pouco mais de padding para respirar */
-
-    /* --- AS CORREÇÕES IMPORTANTES ESTÃO AQUI --- */
-    position: absolute; /* Para o menu flutuar sobre o conteúdo */
-    top: 100%; /* Começa exatamente abaixo do header */
+    padding: 1.5rem;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--white); /* O fundo branco que faltava! */
+    background-color: var(--white);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05); /* Sombra suave para destacar */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
 }
 
 .nav-mobile.active {
@@ -224,6 +217,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-title {
@@ -268,8 +262,8 @@ section {
     margin: 0 auto;
 }
 
-/* About Section */
-.about {
+/* About Section & Cards */
+.about, .contact {
     background: var(--light-gray);
 }
 
@@ -338,7 +332,7 @@ section {
     margin: 0;
 }
 
-/* Values */
+/* Values & Diferenciais */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -368,7 +362,7 @@ section {
 }
 
 .value-item:hover {
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(188, 153, 66, 0.1);
 }
 
 .value-item i {
@@ -401,7 +395,7 @@ section {
 .area-icon {
     width: 80px;
     height: 80px;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(188, 153, 66, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -424,39 +418,7 @@ section {
     line-height: 1.6;
 }
 
-.area-services {
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.area-services h4 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--gold);
-}
-
-.area-services ul {
-    list-style: none;
-    padding: 0;
-}
-
-.area-services li {
-    padding: 0.25rem 0;
-    font-size: 0.9rem;
-    color: var(--gray);
-}
-
-.area-services li:before {
-    content: "✓ ";
-    color: var(--gold);
-    font-weight: bold;
-}
-
 /* Contact Section */
-.contact {
-    background: var(--light-gray);
-}
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -495,26 +457,6 @@ section {
     border-color: var(--gold);
 }
 
-/* Form Messages */
-.form-message {
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.form-message.success {
-    background: rgba(39, 174, 96, 0.1);
-    color: var(--success);
-    border: 1px solid var(--success);
-}
-
-.form-message.error {
-    background: rgba(231, 76, 60, 0.1);
-    color: var(--error);
-    border: 1px solid var(--error);
-}
-
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -539,7 +481,7 @@ section {
 .contact-icon {
     width: 50px;
     height: 50px;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(188, 153, 66, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -646,87 +588,6 @@ section {
     box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-desktop {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .values-list {
-        grid-template-columns: 1fr;
-    }
-    
-    .areas-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    section {
-        padding: 3rem 0;
-    }
-    
-    .container {
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .card {
-        padding: 1.5rem;
-    }
-    
-    .area-card {
-        padding: 1.5rem;
-    }
-    
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
 /* Animações */
 @keyframes fadeInUp {
     from {
@@ -739,24 +600,97 @@ section {
     }
 }
 
-.hero-content {
-    animation: fadeInUp 1s ease-out;
-}
-
 /* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
-
 ::-webkit-scrollbar-thumb {
     background: var(--gold);
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--gold-dark);
+}
+
+/* ======================================================= */
+/* DESIGN RESPONSIVO UNIFICADO (PARA CELULAR E TABLET)     */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+    /* ----- GERAL ----- */
+    section {
+        padding: 3rem 0;
+    }
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .section-header {
+        text-align: center;
+    }
+
+    /* ----- HEADER ----- */
+    .nav-desktop {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* ----- HERO ----- */
+    .hero-content {
+        text-align: center;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    /* ----- GRIDS DE COLUNAS ----- */
+    .about-grid,
+    .areas-grid,
+    .contact-grid,
+    .footer-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    .values-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* ----- FOOTER ----- */
+    .footer-grid {
+        text-align: center;
+    }
+}
+
+/* Telas ainda menores */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .card, .area-card {
+        padding: 1.5rem;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
 }
